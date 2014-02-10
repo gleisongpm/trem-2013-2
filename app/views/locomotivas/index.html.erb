@@ -1,0 +1,29 @@
+<h1>Listing locomotivas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Modelo</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @locomotivas.each do |locomotiva| %>
+      <tr>
+        <td><%= locomotiva.nome %></td>
+        <td><%= locomotiva.modelo %></td>
+        <td><%= link_to 'Show', locomotiva %></td>
+        <td><%= link_to 'Edit', edit_locomotiva_path(locomotiva) %></td>
+        <td><%= link_to 'Excluir', locomotiva, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Locomotiva', new_locomotiva_path %>

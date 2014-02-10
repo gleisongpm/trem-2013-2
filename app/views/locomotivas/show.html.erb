@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @locomotiva.nome %>
+</p>
+
+<p>
+  <strong>Modelo:</strong>
+  <%= @locomotiva.modelo %>
+</p>
+
+<%= link_to 'Edit', edit_locomotiva_path(@locomotiva) %> |
+<%= link_to 'Back', locomotivas_path %>
