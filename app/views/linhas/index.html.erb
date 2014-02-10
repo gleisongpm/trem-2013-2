@@ -1,0 +1,27 @@
+<h1>Listing linhas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @linhas.each do |linha| %>
+      <tr>
+        <td><%= linha.nome %></td>
+        <td><%= link_to 'Show', linha %></td>
+        <td><%= link_to 'Edit', edit_linha_path(linha) %></td>
+        <td><%= link_to 'Excluir', linha, method: :delete, data: { confirm: 'voce tem certeza?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Linha', new_linha_path %>
