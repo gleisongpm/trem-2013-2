@@ -1,4 +1,6 @@
 Trem::Application.routes.draw do
+  resources :estacaos
+
   resources :linhas
 
   resources :locomotivas

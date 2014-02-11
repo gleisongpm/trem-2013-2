@@ -1,0 +1,27 @@
+<h1>Listing estacaos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @estacaos.each do |estacao| %>
+      <tr>
+        <td><%= estacao.nome %></td>
+        <td><%= link_to 'Show', estacao %></td>
+        <td><%= link_to 'Edit', edit_estacao_path(estacao) %></td>
+        <td><%= link_to 'Excluir', estacao, method: :delete, data: { confirm: 'voce tem certeza?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Estacao', new_estacao_path %>
