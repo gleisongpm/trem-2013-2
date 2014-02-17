@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Linha:</strong>
+  <%= @parada.linha.nome %>
+</p>
+
+<p>
+  <strong>Estação:</strong>
+  <%= @parada.estacao.nome %>
+</p>
+
+<%= link_to 'Edit', edit_parada_path(@parada) %> |
+<%= link_to 'Back', paradas_path %>

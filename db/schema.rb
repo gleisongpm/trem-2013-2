@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140217161911) do
+ActiveRecord::Schema.define(version: 20140217194726) do
 
   create_table "estacaos", force: true do |t|
     t.string   "nome"
@@ -31,6 +31,16 @@ ActiveRecord::Schema.define(version: 20140217161911) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "paradas", force: true do |t|
+    t.integer  "linha_id"
+    t.integer  "estacao_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "paradas", ["estacao_id"], name: "index_paradas_on_estacao_id"
+  add_index "paradas", ["linha_id"], name: "index_paradas_on_linha_id"
 
   create_table "tremlinhas", force: true do |t|
     t.string   "destino"
