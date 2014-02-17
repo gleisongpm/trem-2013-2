@@ -1,0 +1,31 @@
+<h1>Listing tremlinhas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Destino</th>
+      <th>Locomotiva</th>
+      <th>Linha</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tremlinhas.each do |tremlinha| %>
+      <tr>
+        <td><%= tremlinha.destino %></td>
+        <td><%= tremlinha.locomotiva %></td>
+        <td><%= tremlinha.linha %></td>
+        <td><%= link_to 'Show', tremlinha %></td>
+        <td><%= link_to 'Edit', edit_tremlinha_path(tremlinha) %></td>
+        <td><%= link_to 'Excluir', tremlinha, method: :delete, data: { confirm: 'Você tem certeza' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tremlinha', new_tremlinha_path %>

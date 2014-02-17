@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Destino:</strong>
+  <%= @tremlinha.destino %>
+</p>
+
+<p>
+  <strong>Locomotiva:</strong>
+  <%= @tremlinha.locomotiva.nome %>
+</p>
+
+<p>
+  <strong>Linha:</strong>
+  <%= @tremlinha.linha.nome %>
+</p>
+
+<%= link_to 'Edit', edit_tremlinha_path(@tremlinha) %> |
+<%= link_to 'Back', tremlinhas_path %>

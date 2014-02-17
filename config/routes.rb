@@ -1,4 +1,6 @@
 Trem::Application.routes.draw do
+  resources :tremlinhas
+
   resources :estacaos
 
   resources :linhas
