@@ -50,11 +50,13 @@ feature 'gerenciar parada' do
     select 'YYY', :from => 'Linha'
     select 'XXX', :from => 'Estação'
 
-    
+    fill_in 'Ordem', :with => 'tres'
+
     click_button 'Salvar'
     
     page.should have_content 'Linha: YYY'
     page.should have_content 'Estação: XXX'
+    page.should have_content 'Ordem: tres'
     
   end
 

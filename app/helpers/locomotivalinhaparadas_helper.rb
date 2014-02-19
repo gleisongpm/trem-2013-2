@@ -1,0 +1,2 @@
+module LocomotivalinhaparadasHelper
+end

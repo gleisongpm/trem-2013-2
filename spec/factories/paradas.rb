@@ -2,6 +2,7 @@
 
 FactoryGirl.define do
   factory :parada do
+    ordem "MyString"
     linha nil
     estacao nil
   end

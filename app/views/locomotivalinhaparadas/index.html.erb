@@ -1,0 +1,33 @@
+<h1>Listing locomotivalinhaparadas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Horachegada</th>
+      <th>Horapartida</th>
+      <th>Tremlinha</th>
+      <th>Parada</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @locomotivalinhaparadas.each do |locomotivalinhaparada| %>
+      <tr>
+        <td><%= locomotivalinhaparada.horachegada %></td>
+        <td><%= locomotivalinhaparada.horapartida %></td>
+        <td><%= locomotivalinhaparada.tremlinha %></td>
+        <td><%= locomotivalinhaparada.parada %></td>
+        <td><%= link_to 'Show', locomotivalinhaparada %></td>
+        <td><%= link_to 'Edit', edit_locomotivalinhaparada_path(locomotivalinhaparada) %></td>
+        <td><%= link_to 'Excluir', locomotivalinhaparada, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Locomotivalinhaparada', new_locomotivalinhaparada_path %>

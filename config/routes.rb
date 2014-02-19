@@ -1,4 +1,6 @@
 Trem::Application.routes.draw do
+  resources :locomotivalinhaparadas
+
   resources :paradas
 
   resources :tremlinhas

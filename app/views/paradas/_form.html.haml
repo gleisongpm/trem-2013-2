@@ -1,7 +1,8 @@
 = semantic_form_for [@parada] do |form|
   
-  = form.input :linha, :member_label => :nome, :label => 'Linha' 
+  = form.input :linha, :member_label => :nome, :label => 'Linha'
   = form.input :estacao, :member_label => :nome, :label => 'Estação'
 
- 
+  = form.input :ordem, :label => 'Ordem'
+
   = form.submit 'Salvar'

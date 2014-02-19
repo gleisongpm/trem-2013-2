@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Ordem</th>
       <th>Linha</th>
       <th>Estacao</th>
       <th></th>
@@ -14,11 +15,12 @@
   <tbody>
     <% @paradas.each do |parada| %>
       <tr>
+        <td><%= parada.ordem %></td>
         <td><%= parada.linha %></td>
         <td><%= parada.estacao %></td>
         <td><%= link_to 'Show', parada %></td>
         <td><%= link_to 'Edit', edit_parada_path(parada) %></td>
-        <td><%= link_to 'Excluir', parada, method: :delete, data: { confirm: 'Voce tem certeza?' } %></td>
+        <td><%= link_to 'Excluir', parada, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

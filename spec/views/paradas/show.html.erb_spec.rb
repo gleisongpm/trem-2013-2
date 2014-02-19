@@ -3,6 +3,7 @@ require 'spec_helper'
 describe "paradas/show" do
   before(:each) do
     @parada = assign(:parada, stub_model(Parada,
+      :ordem => "Ordem",
       :linha => nil,
       :estacao => nil
     ))
@@ -11,6 +12,7 @@ describe "paradas/show" do
   it "renders attributes in <p>" do
     render
     # Run the generator again with the --webrat flag if you want to use webrat matchers
+    rendered.should match(/Ordem/)
     rendered.should match(//)
     rendered.should match(//)
   end

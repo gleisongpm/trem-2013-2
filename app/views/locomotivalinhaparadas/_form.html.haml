@@ -1,0 +1,10 @@
+= semantic_form_for [@locomotivalinhaparada] do |form|
+  
+  = form.input :tremlinha, :member_label => :destino, :label => 'Tremlinha' 
+  = form.input :parada, :member_label => :ordem, :label => 'Parada'
+
+  = form.input :horachegada, :label => 'Hora Chegada'
+  = form.input :horapartida, :label => 'Hora Partida'
+  
+ 
+  = form.submit 'Salvar'

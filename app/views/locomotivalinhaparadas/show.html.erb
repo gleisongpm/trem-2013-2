@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Hora Chegada:</strong>
+  <%= @locomotivalinhaparada.horachegada %>
+</p>
+
+<p>
+  <strong>Hora Partida:</strong>
+  <%= @locomotivalinhaparada.horapartida %>
+</p>
+
+<p>
+  <strong>Tremlinha:</strong>
+  <%= @locomotivalinhaparada.tremlinha.destino %>
+</p>
+
+<p>
+  <strong>Parada:</strong>
+  <%= @locomotivalinhaparada.parada.ordem %>
+</p>
+
+<%= link_to 'Edit', edit_locomotivalinhaparada_path(@locomotivalinhaparada) %> |
+<%= link_to 'Back', locomotivalinhaparadas_path %>

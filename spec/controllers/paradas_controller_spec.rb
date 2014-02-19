@@ -23,7 +23,7 @@ describe ParadasController do
   # This should return the minimal set of attributes required to create a valid
   # Parada. As you add validations to Parada, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) { { "linha" => "" } }
+  let(:valid_attributes) { { "ordem" => "MyString" } }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
@@ -85,14 +85,14 @@ describe ParadasController do
       it "assigns a newly created but unsaved parada as @parada" do
         # Trigger the behavior that occurs when invalid params are submitted
         Parada.any_instance.stub(:save).and_return(false)
-        post :create, {:parada => { "linha" => "invalid value" }}, valid_session
+        post :create, {:parada => { "ordem" => "invalid value" }}, valid_session
         assigns(:parada).should be_a_new(Parada)
       end
 
       it "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
         Parada.any_instance.stub(:save).and_return(false)
-        post :create, {:parada => { "linha" => "invalid value" }}, valid_session
+        post :create, {:parada => { "ordem" => "invalid value" }}, valid_session
         response.should render_template("new")
       end
     end
@@ -106,8 +106,8 @@ describe ParadasController do
         # specifies that the Parada created on the previous line
         # receives the :update_attributes message with whatever params are
         # submitted in the request.
-        Parada.any_instance.should_receive(:update).with({ "linha" => "" })
-        put :update, {:id => parada.to_param, :parada => { "linha" => "" }}, valid_session
+        Parada.any_instance.should_receive(:update).with({ "ordem" => "MyString" })
+        put :update, {:id => parada.to_param, :parada => { "ordem" => "MyString" }}, valid_session
       end
 
       it "assigns the requested parada as @parada" do
@@ -128,7 +128,7 @@ describe ParadasController do
         parada = Parada.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Parada.any_instance.stub(:save).and_return(false)
-        put :update, {:id => parada.to_param, :parada => { "linha" => "invalid value" }}, valid_session
+        put :update, {:id => parada.to_param, :parada => { "ordem" => "invalid value" }}, valid_session
         assigns(:parada).should eq(parada)
       end
 
@@ -136,7 +136,7 @@ describe ParadasController do
         parada = Parada.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Parada.any_instance.stub(:save).and_return(false)
-        put :update, {:id => parada.to_param, :parada => { "linha" => "invalid value" }}, valid_session
+        put :update, {:id => parada.to_param, :parada => { "ordem" => "invalid value" }}, valid_session
         response.should render_template("edit")
       end
     end
