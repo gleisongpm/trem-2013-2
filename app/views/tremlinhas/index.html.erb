@@ -1,4 +1,4 @@
-<h1>Listing tremlinhas</h1>
+<h1>Listando tremlinhas</h1>
 
 <table>
   <thead>
@@ -16,11 +16,11 @@
     <% @tremlinhas.each do |tremlinha| %>
       <tr>
         <td><%= tremlinha.destino %></td>
-        <td><%= tremlinha.locomotiva %></td>
-        <td><%= tremlinha.linha %></td>
+        <td><%= tremlinha.locomotiva.nome %></td>
+        <td><%= tremlinha.linha.nome %></td>
         <td><%= link_to 'Show', tremlinha %></td>
         <td><%= link_to 'Edit', edit_tremlinha_path(tremlinha) %></td>
-        <td><%= link_to 'Excluir', tremlinha, method: :delete, data: { confirm: 'Você tem certeza' } %></td>
+        <td><%= link_to 'Excluir', tremlinha, method: :delete, data: { confirm: 'Você tem certeza que deseja excluir' } %></td>
       </tr>
     <% end %>
   </tbody>

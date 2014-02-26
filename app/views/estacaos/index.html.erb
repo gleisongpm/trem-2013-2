@@ -1,4 +1,4 @@
-<h1>Listing estacaos</h1>
+<h1>Listando estações</h1>
 
 <table>
   <thead>
@@ -16,7 +16,7 @@
         <td><%= estacao.nome %></td>
         <td><%= link_to 'Show', estacao %></td>
         <td><%= link_to 'Edit', edit_estacao_path(estacao) %></td>
-        <td><%= link_to 'Excluir', estacao, method: :delete, data: { confirm: 'voce tem certeza?' } %></td>
+        <td><%= link_to 'Excluir', estacao, method: :delete, data: { confirm: 'Você tem certeza que deseja excluir?' } %></td>
       </tr>
     <% end %>
   </tbody>

@@ -1,4 +1,4 @@
-<h1>Listing linhas</h1>
+<h1>Listando linhas</h1>
 
 <table>
   <thead>
@@ -16,7 +16,7 @@
         <td><%= linha.nome %></td>
         <td><%= link_to 'Show', linha %></td>
         <td><%= link_to 'Edit', edit_linha_path(linha) %></td>
-        <td><%= link_to 'Excluir', linha, method: :delete, data: { confirm: 'voce tem certeza?' } %></td>
+        <td><%= link_to 'Excluir', linha, method: :delete, data: { confirm: 'Você tem certeza que deseja excluir?' } %></td>
       </tr>
     <% end %>
   </tbody>

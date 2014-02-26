@@ -1,12 +1,12 @@
-<h1>Listing locomotivalinhaparadas</h1>
+<h1>Listando locomotivalinhaparadas</h1>
 
 <table>
   <thead>
     <tr>
       <th>Horachegada</th>
       <th>Horapartida</th>
-      <th>Tremlinha</th>
-      <th>Parada</th>
+      <th>Tremlinha(Destino)</th>
+      <th>Parada(Estação)</th>
       <th></th>
       <th></th>
       <th></th>
@@ -18,11 +18,11 @@
       <tr>
         <td><%= locomotivalinhaparada.horachegada %></td>
         <td><%= locomotivalinhaparada.horapartida %></td>
-        <td><%= locomotivalinhaparada.tremlinha %></td>
-        <td><%= locomotivalinhaparada.parada %></td>
+        <td><%= locomotivalinhaparada.tremlinha.destino %></td>
+        <td><%= locomotivalinhaparada.parada.estacao.nome %></td>
         <td><%= link_to 'Show', locomotivalinhaparada %></td>
         <td><%= link_to 'Edit', edit_locomotivalinhaparada_path(locomotivalinhaparada) %></td>
-        <td><%= link_to 'Excluir', locomotivalinhaparada, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Excluir', locomotivalinhaparada, method: :delete, data: { confirm: 'Você tem certeza que deseja excluir?' } %></td>
       </tr>
     <% end %>
   </tbody>

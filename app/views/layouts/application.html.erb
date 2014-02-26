@@ -1,14 +1,69 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 3.0 License
+
+Name       : Flamingo  
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20120520
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Trem</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Controle da localização de Trens de Passageiros</title>
+	<link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css" />
+	<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+	
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag :style %>
+    <%= javascript_include_tag :application %>
+    <%= csrf_meta_tag %>
+ 
 </head>
 <body>
-
-<%= yield %>
-
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1><a href="#">Trens </a>   <span>Saiba onde estão sem sair de casa</span></h1>
+		</div>
+	</div>
+	<!-- end #header -->
+	<div id="menu">
+		<ul>
+			<li class="current_page_item"><a href="http://localhost:3000">Home</a></li>
+			<li><%= link_to 'Locomotiva',locomotivas_path %></li>
+			<li><%= link_to 'Linha',linhas_path %></li>
+			<li><%= link_to 'Estação',estacaos_path %></li>
+			<li><%= link_to 'Incluir Locomotiva a Linha',tremlinhas_path %></li>
+			<li><%= link_to 'Parada',paradas_path %></li>
+			<li><%= link_to 'Incluir Locomotivas a Paradas',locomotivalinhaparadas_path %></li>
+		</ul>
+	</div>
+	<!-- end #menu -->
+	<div id="page">
+		<div class="post">
+			<h2 class="title">Localização de Trens de Passgeiros em sua mãos</h2>
+			<p><%= image_tag "trembala.jpg", :size => "820x350" %></p>
+			
+		</div>
+		<div id="two-column">
+			<div id="column1">
+				<a name="ancora"> </a><%= yield %>
+			</div>
+		</div>
+	</div>
+	
+</div>
+<div id="footer">
+	<p>Copyright (c) 2012 Sitename.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org/" rel="nofollow">FreeCSSTemplates.org</a>. Photos by <a href="http://fotogrph.com/">fotogrph</a>.</p>
+</div>
+<!-- end #footer -->
 </body>
 </html>
+

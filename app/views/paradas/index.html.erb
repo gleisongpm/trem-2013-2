@@ -1,4 +1,4 @@
-<h1>Listing paradas</h1>
+<h1>Listando paradas</h1>
 
 <table>
   <thead>
@@ -16,11 +16,11 @@
     <% @paradas.each do |parada| %>
       <tr>
         <td><%= parada.ordem %></td>
-        <td><%= parada.linha %></td>
-        <td><%= parada.estacao %></td>
+        <td><%= parada.linha.nome %></td>
+        <td><%= parada.estacao.nome %></td>
         <td><%= link_to 'Show', parada %></td>
         <td><%= link_to 'Edit', edit_parada_path(parada) %></td>
-        <td><%= link_to 'Excluir', parada, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Excluir', parada, method: :delete, data: { confirm: 'Você tem certeza que deseja excluir?' } %></td>
       </tr>
     <% end %>
   </tbody>
