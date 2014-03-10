@@ -5,7 +5,7 @@
     <tr>
       <th>Horachegada</th>
       <th>Horapartida</th>
-      <th>Tremlinha(Destino)</th>
+      <th>Tremlinha(ordem)</th>
       <th>Parada(Estação)</th>
       <th></th>
       <th></th>
@@ -19,7 +19,7 @@
         <td><%= locomotivalinhaparada.horachegada %></td>
         <td><%= locomotivalinhaparada.horapartida %></td>
         <td><%= locomotivalinhaparada.tremlinha.destino %></td>
-        <td><%= locomotivalinhaparada.parada.estacao.nome %></td>
+        <td><%= locomotivalinhaparada.parada.ordem %></td>
         <td><%= link_to 'Show', locomotivalinhaparada %></td>
         <td><%= link_to 'Edit', edit_locomotivalinhaparada_path(locomotivalinhaparada) %></td>
         <td><%= link_to 'Excluir', locomotivalinhaparada, method: :delete, data: { confirm: 'Você tem certeza que deseja excluir?' } %></td>
